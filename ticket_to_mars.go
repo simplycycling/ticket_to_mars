@@ -12,7 +12,7 @@ func main() {
 	trip := ""
 	
 	fmt.Printf("%-18v %4v %v %7v\n", "Spaceline", "Days", "Round-trip", "Price")
-	fmt.Println("===============================================")
+	fmt.Println("==========================================")
 	for count :=0; count < 10; count++ {
 		
 		speed := rand.Intn(16) + 15
@@ -36,11 +36,17 @@ func main() {
 			trip = "Round Trip"
 		}
 		
+		/*
+		The assignment actually called for having the days listed for just a
+		one-way trip. I did that, and then decided to change it so that the
+		listed days would show the total, round trip time, assuming the return
+		distance and rate were the same.
+		*/
 		if strings.Contains(trip, "Round") {
 			price = price * 2
 			days = days * 2
 		}
 		
-		fmt.Printf("%-18v %4v %-10v $%4v\n", spaceline, days, trip, price)
+		fmt.Printf("%-18v %4v %-12v $%4v\n", spaceline, days, trip, price)
 	}
 }
