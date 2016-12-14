@@ -15,6 +15,11 @@ func main() {
 	fmt.Println("===============================================")
 	for count :=0; count < 10; count++ {
 		
+		speed := rand.Intn(16) + 15
+		days := (distance / speed) / 86164
+		price := days / 2
+		
+		
 		switch rand.Intn(3) {
 		case 0:
 			spaceline = "Space Adventures"
@@ -23,11 +28,6 @@ func main() {
 		case 2:
 			spaceline = "Virgin Galactic"
 		}
-		
-		
-		speed := rand.Intn(16) + 15
-		days := (distance / speed) / 86164
-		price := days / 2
 		
 		switch rand.Intn(2) {
 		case 0:
