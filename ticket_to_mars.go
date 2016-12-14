@@ -8,7 +8,7 @@ import (
 
 func main() {
 	const distance = 57600000
-	company := ""
+	spaceline := ""
 	trip := ""
 	
 	fmt.Printf("%-18v %4v %v %7v\n", "Spaceline", "Days", "Round-trip", "Price")
@@ -17,11 +17,11 @@ func main() {
 		
 		switch rand.Intn(3) {
 		case 0:
-			company = "Space Adventures"
+			spaceline = "Space Adventures"
 		case 1:
-			company = "SpaceX"
+			spaceline = "SpaceX"
 		case 2:
-			company = "Virgin Galactic"
+			spaceline = "Virgin Galactic"
 		}
 		
 		
@@ -40,6 +40,6 @@ func main() {
 			price = price * 2
 		}
 		
-		fmt.Printf("%-18v %4v %v $%4v\n", company, days, trip, price)
+		fmt.Printf("%-18v %4v %v $%4v\n", spaceline, days, trip, price)
 	}
 }
