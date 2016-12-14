@@ -8,6 +8,7 @@ import (
 func main() {
 	distance := 57600000
 	company := ""
+	trip := ""
 	
 	fmt.Printf("%-18v %4v %v %7v\n", "Spaceline", "Days", "Round-trip", "Price")
 	fmt.Println("===============================================")
@@ -25,6 +26,12 @@ func main() {
 		days := (distance / speed) / 86164
 		price := days / 2
 		
-		fmt.Printf("%-18v %4v %v $%4v\n", company, days, "Round trip", price)
+		switch rand.Intn(2) {
+		case 0:
+			trip = "One Way"
+		case 1:
+			trip = "Round Trip"
+		}
+		fmt.Printf("%-18v %4v %v $%4v\n", company, days, trip, price)
 	}
 }
