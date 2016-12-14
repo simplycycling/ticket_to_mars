@@ -38,8 +38,9 @@ func main() {
 		
 		if strings.Contains(trip, "Round") {
 			price = price * 2
+			days = days * 2
 		}
 		
-		fmt.Printf("%-18v %4v %v $%4v\n", spaceline, days, trip, price)
+		fmt.Printf("%-18v %4v %-10v $%4v\n", spaceline, days, trip, price)
 	}
 }
